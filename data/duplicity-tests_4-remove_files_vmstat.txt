@@ -1,0 +1,280 @@
+<processes version="1">
+  <runnable>0</runnable>
+  <waiting>0</waiting>
+  <swapped-out>0</swapped-out>
+</processes>
+<memory>
+  <available-memory>337408</available-memory>
+  <free-memory>3877388</free-memory>
+  <total-page-faults>306</total-page-faults>
+</memory>
+<paging-rates>
+  <page-reactivated>0</page-reactivated>
+  <paged-in>2</paged-in>
+  <paged-out>0</paged-out>
+  <freed>492</freed>
+  <scanned>5</scanned>
+</paging-rates>
+<device>
+  <name>vt0</name>
+  <transfers>0</transfers>
+</device>
+<device>
+  <name>vt1</name>
+  <transfers>0</transfers>
+</device>
+<fault-rates>
+  <interrupts>13</interrupts>
+  <system-calls>1311</system-calls>
+  <context-switches>299</context-switches>
+</fault-rates>
+<cpu-statistics>
+  <user> 0</user>
+  <system> 1</system>
+  <idle>99</idle>
+</cpu-statistics>
+<processes>
+  <runnable>1</runnable>
+  <waiting>0</waiting>
+  <swapped-out>0</swapped-out>
+</processes>
+<memory>
+  <available-memory>395028</available-memory>
+  <free-memory>3831296</free-memory>
+  <total-page-faults>9776</total-page-faults>
+</memory>
+<paging-rates>
+  <page-reactivated>0</page-reactivated>
+  <paged-in>240</paged-in>
+  <paged-out>0</paged-out>
+  <freed>962</freed>
+  <scanned>10</scanned>
+</paging-rates>
+<device>
+  <name>vt0</name>
+  <transfers>886</transfers>
+</device>
+<device>
+  <name>vt1</name>
+  <transfers>0</transfers>
+</device>
+<fault-rates>
+  <interrupts>942</interrupts>
+  <system-calls>7627</system-calls>
+  <context-switches>3856</context-switches>
+</fault-rates>
+<cpu-statistics>
+  <user>15</user>
+  <system> 7</system>
+  <idle>77</idle>
+</cpu-statistics>
+<processes>
+  <runnable>0</runnable>
+  <waiting>0</waiting>
+  <swapped-out>0</swapped-out>
+</processes>
+<memory>
+  <available-memory>400056</available-memory>
+  <free-memory>3825412</free-memory>
+  <total-page-faults>1447</total-page-faults>
+</memory>
+<paging-rates>
+  <page-reactivated>0</page-reactivated>
+  <paged-in>10</paged-in>
+  <paged-out>0</paged-out>
+  <freed>19</freed>
+  <scanned>15</scanned>
+</paging-rates>
+<device>
+  <name>vt0</name>
+  <transfers>20</transfers>
+</device>
+<device>
+  <name>vt1</name>
+  <transfers>0</transfers>
+</device>
+<fault-rates>
+  <interrupts>37</interrupts>
+  <system-calls>507</system-calls>
+  <context-switches>244</context-switches>
+</fault-rates>
+<cpu-statistics>
+  <user> 7</user>
+  <system> 1</system>
+  <idle>92</idle>
+</cpu-statistics>
+<processes>
+  <runnable>0</runnable>
+  <waiting>0</waiting>
+  <swapped-out>0</swapped-out>
+</processes>
+<memory>
+  <available-memory>403268</available-memory>
+  <free-memory>3821612</free-memory>
+  <total-page-faults>3712</total-page-faults>
+</memory>
+<paging-rates>
+  <page-reactivated>0</page-reactivated>
+  <paged-in>0</paged-in>
+  <paged-out>0</paged-out>
+  <freed>524</freed>
+  <scanned>22</scanned>
+</paging-rates>
+<device>
+  <name>vt0</name>
+  <transfers>11</transfers>
+</device>
+<device>
+  <name>vt1</name>
+  <transfers>0</transfers>
+</device>
+<fault-rates>
+  <interrupts>74</interrupts>
+  <system-calls>815</system-calls>
+  <context-switches>318</context-switches>
+</fault-rates>
+<cpu-statistics>
+  <user> 3</user>
+  <system> 2</system>
+  <idle>95</idle>
+</cpu-statistics>
+<processes>
+  <runnable>0</runnable>
+  <waiting>0</waiting>
+  <swapped-out>0</swapped-out>
+</processes>
+<memory>
+  <available-memory>445784</available-memory>
+  <free-memory>3754408</free-memory>
+  <total-page-faults>4130</total-page-faults>
+</memory>
+<paging-rates>
+  <page-reactivated>0</page-reactivated>
+  <paged-in>54</paged-in>
+  <paged-out>0</paged-out>
+  <freed>2472</freed>
+  <scanned>20</scanned>
+</paging-rates>
+<device>
+  <name>vt0</name>
+  <transfers>387</transfers>
+</device>
+<device>
+  <name>vt1</name>
+  <transfers>128</transfers>
+</device>
+<fault-rates>
+  <interrupts>705</interrupts>
+  <system-calls>360500</system-calls>
+  <context-switches>2813</context-switches>
+</fault-rates>
+<cpu-statistics>
+  <user>33</user>
+  <system>12</system>
+  <idle>55</idle>
+</cpu-statistics>
+<processes>
+  <runnable>1</runnable>
+  <waiting>0</waiting>
+  <swapped-out>0</swapped-out>
+</processes>
+<memory>
+  <available-memory>445784</available-memory>
+  <free-memory>3708596</free-memory>
+  <total-page-faults>20</total-page-faults>
+</memory>
+<paging-rates>
+  <page-reactivated>0</page-reactivated>
+  <paged-in>0</paged-in>
+  <paged-out>0</paged-out>
+  <freed>495</freed>
+  <scanned>20</scanned>
+</paging-rates>
+<device>
+  <name>vt0</name>
+  <transfers>159</transfers>
+</device>
+<device>
+  <name>vt1</name>
+  <transfers>318</transfers>
+</device>
+<fault-rates>
+  <interrupts>728</interrupts>
+  <system-calls>12704</system-calls>
+  <context-switches>3501</context-switches>
+</fault-rates>
+<cpu-statistics>
+  <user>36</user>
+  <system> 8</system>
+  <idle>56</idle>
+</cpu-statistics>
+<processes>
+  <runnable>0</runnable>
+  <waiting>0</waiting>
+  <swapped-out>0</swapped-out>
+</processes>
+<memory>
+  <available-memory>435764</available-memory>
+  <free-memory>3602040</free-memory>
+  <total-page-faults>1687</total-page-faults>
+</memory>
+<paging-rates>
+  <page-reactivated>0</page-reactivated>
+  <paged-in>0</paged-in>
+  <paged-out>0</paged-out>
+  <freed>360</freed>
+  <scanned>20</scanned>
+</paging-rates>
+<device>
+  <name>vt0</name>
+  <transfers>792</transfers>
+</device>
+<device>
+  <name>vt1</name>
+  <transfers>13</transfers>
+</device>
+<fault-rates>
+  <interrupts>850</interrupts>
+  <system-calls>5012</system-calls>
+  <context-switches>1967</context-switches>
+</fault-rates>
+<cpu-statistics>
+  <user>22</user>
+  <system> 6</system>
+  <idle>72</idle>
+</cpu-statistics>
+<processes>
+  <runnable>0</runnable>
+  <waiting>0</waiting>
+  <swapped-out>0</swapped-out>
+</processes>
+<memory>
+  <available-memory>438224</available-memory>
+  <free-memory>3601500</free-memory>
+  <total-page-faults>2390</total-page-faults>
+</memory>
+<paging-rates>
+  <page-reactivated>0</page-reactivated>
+  <paged-in>0</paged-in>
+  <paged-out>0</paged-out>
+  <freed>1246</freed>
+  <scanned>20</scanned>
+</paging-rates>
+<device>
+  <name>vt0</name>
+  <transfers>0</transfers>
+</device>
+<device>
+  <name>vt1</name>
+  <transfers>0</transfers>
+</device>
+<fault-rates>
+  <interrupts>8</interrupts>
+  <system-calls>1233</system-calls>
+  <context-switches>250</context-switches>
+</fault-rates>
+<cpu-statistics>
+  <user> 7</user>
+  <system> 0</system>
+  <idle>93</idle>
+</cpu-statistics>

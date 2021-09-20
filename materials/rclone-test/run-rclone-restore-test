@@ -1,0 +1,23 @@
+#!/bin/sh
+
+# On Ctrl+C, kill all the processess in the group.
+trap 'kill 0' SIGINT
+
+# rclone sync \
+	# --checksum \
+	# --fast-list \
+	# --log-file /path/to/rclone.log \
+	# --progress \
+	# --stats-one-line \
+	# --transfers 4 \ # Note: rclone uses about <transfers> * 100MB of RAM to buffer when sending large files. Set accordingly on low memory systems.
+	# --verbose \
+	# 	/path/to/local/source \
+	#	b2:BUCKET_NAME
+
+# Do the main command.
+rclone sync --checksum --log-file ./rclone.log --progress --stats-one-line --transfers 4 --verbose remote:YOUR_B2_BUCKET_NAME /tank &&
+# After it's done, kill all the processes in the group.
+kill 0  &
+# Run these commands concurrently with the main command.
+vmstat 1 --libxo xml,pretty > ./vmstat.txt &
+netstat -i -w 1 --libxo xml,pretty > ./netstat.txt

@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# On Ctrl+C, kill all the processes in the group
+trap 'kill 0' SIGINT
+
+# Do the main command.
+time -l b2 sync --keepDays 30 --replaceNewer --threads 30 /tank b2://YOUR_B2_BUCKET_NAME/ &&
+# After it's done, kill all the processes in the group.
+kill 0  &
+# Run these commands concurrently with the main command.
+vmstat 1 --libxo xml,pretty > ./vmstat.txt &
+netstat -I vtnet0 -w 1 --libxo xml,pretty > ./netstat.txt

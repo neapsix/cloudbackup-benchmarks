@@ -1,0 +1,9 @@
+"processes_runnable","processes_waiting","processes_swappedout","memory_availablememory","memory_freememory","memory_totalpagefaults","pagingrates_pagereactivated","pagingrates_pagedin","pagingrates_pagedout","pagingrates_freed","pagingrates_scanned","faultrates_interrupts","faultrates_systemcalls","faultrates_contextswitches","cpustatistics_user","cpustatistics_system","cpustatistics_idle"
+0,0,0,337408,3877388,306,0,2,0,492,5,13,1311,299,0,1,99
+1,0,0,395028,3831296,9776,0,240,0,962,10,942,7627,3856,15,7,77
+0,0,0,400056,3825412,1447,0,10,0,19,15,37,507,244,7,1,92
+0,0,0,403268,3821612,3712,0,0,0,524,22,74,815,318,3,2,95
+0,0,0,445784,3754408,4130,0,54,0,2472,20,705,360500,2813,33,12,55
+1,0,0,445784,3708596,20,0,0,0,495,20,728,12704,3501,36,8,56
+0,0,0,435764,3602040,1687,0,0,0,360,20,850,5012,1967,22,6,72
+0,0,0,438224,3601500,2390,0,0,0,1246,20,8,1233,250,7,0,93
