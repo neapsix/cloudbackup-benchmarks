@@ -16,7 +16,7 @@ directories describe how to re-run the tests and collect your own results.
 
 ## Run Backup Tests for Each Client and Test Case
 >Prerequisites: a test machine with a dataset containing some files mounted
->as /tank and a remote target, such as a b2 bucket, ready to go.
+>as `/tank` and a remote target, such as a b2 bucket, ready to go.
 
 To run the backup tests for a certain backup client, complete the following tasks:
 * Copy the directory containing materials for one of the clients to the test machine.
@@ -37,45 +37,45 @@ The test procedure is:
 
 Here's an example of how you would run a backup test for `restic`:
 1. Copy the restic materials to your test machine:
-```sh
-$ rsync -hav ./restic-tests user@testmachine:/home/user/
-```
+  ```sh
+  $ rsync -hav ./restic-tests user@testmachine:/home/user/
+  ```
 2. Perform client-specific setup. For example:
-```sh
-$ wget https://github.com/restic/restic/releases/download/v0.12.1/restic_0.12.1_freebsd_amd64.bz2
-$ bzip2 -d restic_0.12.1_freebsd_amd64.bz2
-$ ./restic -r b2:name-of-your-b2-bucket init
-$ vi ./restic-pw # write the restic passowrd in a file the script can read
-$ vi ~/restic-tests/run-restic-test # specify b2 and restic credentials
-$ vi ~/restic-tests/run-restic-restore-test # enter b2 and restic credentials
-```
->Note: if you're using ZFS or btrfs, it's helpful to create a filesystem
->snapshot before performing each test. For example, run
->`# zfs snapshot -r tank@initial` before the first test.
+  ```sh
+  $ wget https://github.com/restic/restic/releases/download/v0.12.1/restic_0.12.1_freebsd_amd64.bz2
+  $ bzip2 -d restic_0.12.1_freebsd_amd64.bz2
+  $ ./restic -r b2:name-of-your-b2-bucket init
+  $ vi ./restic-pw # write the restic passowrd in a file the script can read
+  $ vi ~/restic-tests/run-restic-test # specify b2 and restic credentials
+  $ vi ~/restic-tests/run-restic-restore-test # enter b2 and restic credentials
+  ```
+  >Note: if you're using ZFS or btrfs, it's helpful to create a filesystem
+  >snapshot before performing each test. For example, run
+  >`# zfs snapshot -r tank@initial` before the first test.
 3. Perform the first test. To capture the output of `time` and to avoid
 having to babysit these tests, I recommend running tests overnight in a logged
 and detached `screen` or `tmux` session.
-```sh
-$ screen -X
-$ cd ~/restic-tests/0-initial
-$ ../run-restic-test
-```
+  ```sh
+  $ screen -X
+  $ cd ~/restic-tests/0-initial
+  $ ../run-restic-test
+  ```
 4. For each test case after the first, modify the files and run the script
 again:
-```sh
-$ rsync -hav user@remote:/path/to/files/for/test/1/ /tank/
-$ screen -X
-$ cd ~/restic-tests/1-add_files
-$ ../run-restic-test    
-[...]    
-$ rm -rf /tank/*
-$ screen -X
-$ cd ~/restic-tests/5-restore
-$ ../run-restic-restore-test
-```
+  ```sh
+  $ rsync -hav user@remote:/path/to/files/for/test/1/ /tank/
+  $ screen -X
+  $ cd ~/restic-tests/1-add_files
+  $ ../run-restic-test    
+  [...]    
+  $ rm -rf /tank/*
+  $ screen -X
+  $ cd ~/restic-tests/5-restore
+  $ ../run-restic-restore-test
+  ```
 
 ## Collect Results and Fix File Formatting
->Prerequisites: POSIX shell, GNU sed (see note below), and Rscript.
+>Prerequisites: POSIX shell, GNU `sed` (see note below), and `Rscript`.
 
 After performing all the tests for all the backup clients you want to compare,
 run a few scripts to collect all the data in one place and to create tidy CSV
@@ -96,9 +96,9 @@ $ ls ../materials/*/*/*.txt | xargs -n 1 ../scripts/collect_files.sh
 
 Fix XML output from netstat and vmstat:
 
->Note: the next two scripts assume you're using GNU sed. To run them on macOS
+>Note: the next two scripts assume you're using GNU `sed`. To run them on macOS
 >or BSD, install GNU sed, and edit the script to point to that, such as by
-> replacing `sed` with `gsed`.
+>replacing `sed` with `gsed`.
 
 ```sh
 $ ls ./*netstat.txt | xargs -n 1 ../scripts/fix_netstat_output.sh
@@ -120,7 +120,7 @@ After you run these scripts, the data from each client and each test case is
 available for you to review as a CSV in the `./data` directory.
 
 ## (Optional) Create Plots to Compare Results for Each Test
->Prerequisites: Rscript or an R workspace
+>Prerequisites: `Rscript` or an R workspace
 
 You can make line graphs like the ones in my test data by using an R script. The
 provided script covers all the potential graphs in one file with instructions
