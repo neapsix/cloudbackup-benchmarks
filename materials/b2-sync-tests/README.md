@@ -1,4 +1,4 @@
-## Client-Specific Setup for Backup Tests with `b2 sync`
+### Client-Specific Setup for Backup Tests with `b2 sync`
 >Prerequisites: Python 3, pip, a b2 application key and ID, and a b2 bucket
 
 1. Install the `b2` utility from pip: `pip install --upgrade b2`
