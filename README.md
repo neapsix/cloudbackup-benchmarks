@@ -1,4 +1,20 @@
-# Run Backup Tests for Each Client and Test Case
+# cloudbackup-benchmarks
+Procedure and scripts for benchmarking some popular cloud backup utilities for
+use with Backblaze B2.
+
+This repo is a companion to a series of articles on [neap.space](https://neap.space):
+* [Deep Dive: Cloud Backup for Slow Connections, Part I](https://neap.space/2021/04/deep-dive-cloud-backup-for-slow-connections-part-i/)
+* [Deep Dive: Cloud Backup for Slow Connections, Part II](https://neap.space/2021/04/deep-dive-cloud-backup-for-slow-connections-part-ii/)
+* Part III coming soon
+
+The results of each test are collected in the `data/` directory. For a more
+legible version, refer to the `graphsheet/` directory and to the accompanying
+articles.
+
+The following sections, as well as the other README files in the materials
+directories describe how to re-run the tests and collect your own results.
+
+## Run Backup Tests for Each Client and Test Case
 >Prerequisites: a test machine with a dataset containing some files mounted
 >as /tank and a remote target, such as a b2 bucket, ready to go.
 
@@ -58,7 +74,7 @@ $ cd ~/restic-tests/5-restore
 $ ../run-restic-restore-test
 ```
 
-# Collect Results and Fix File Formatting
+## Collect Results and Fix File Formatting
 >Prerequisites: POSIX shell, GNU sed (see note below), and Rscript.
 
 After performing all the tests for all the backup clients you want to compare,
@@ -103,7 +119,7 @@ $ ls *vmstat.xml | xargs -n 1 -I{} Rscript ../scripts/output_vmstat_csv.R {}
 After you run these scripts, the data from each client and each test case is
 available for you to review as a CSV in the `./data` directory.
 
-# (Optional) Create Plots to Compare Results for Each Test
+## (Optional) Create Plots to Compare Results for Each Test
 >Prerequisites: Rscript or an R workspace
 
 You can make line graphs like the ones in my test data by using an R script. The
@@ -138,10 +154,12 @@ Your plot is saved as an SVG file in the `./data` directory with the test and
 the variable measured as the file name, such as 1-add_files_vmstat_cpu.svg.
 
 ### (Optional) Create a PDF Containing All Graphs
-The `./graphsheet` directory contains a markdown file that presents all the graphs. You can use
-`pandoc` to generate a PDF version by running `pandoc -o graphsheet.pdf graphsheet.md`. 
+The `./graphsheet` directory contains a markdown file that presents all the
+graphs. After creating graphs, you can use `pandoc` to generate a PDF version
+by running `pandoc -o graphsheet.pdf graphsheet.md`.
 
-# Someday Maybe List for Me
+## Someday Maybe
+Here are some changes I'd like to make if I were to run the tests again:
 * Improve backup scripts to better model safe, real-world use by pointing to
 files for all credentials and including file permission steps in client-specific
 setup.
