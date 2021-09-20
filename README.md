@@ -154,6 +154,9 @@ Your plot is saved as an SVG file in the `./data` directory with the test and
 the variable measured as the file name, such as 1-add_files_vmstat_cpu.svg.
 
 ### (Optional) Create a PDF Containing All Graphs
+>Prerequisites: `pandoc`, `rsvg-convert`, and a supported PDF creation engine,
+>such as the LaTeX compilers included in TeX Live.
+
 The `./graphsheet` directory contains a markdown file that presents all the
 graphs. After creating graphs, you can use `pandoc` to generate a PDF version
 by running `pandoc -o graphsheet.pdf graphsheet.md`.
