@@ -1,6 +1,5 @@
 ### Client-Specific Setup for Backup Tests with `restic`
->Prerequisites: a GnuPG2 key pair already imported (optional, see note below),
->a b2 application key and ID, and a b2 bucket.
+>Prerequisites: a b2 application key and ID, and a b2 bucket.
 
 1. Download and prepare the `restic` binary:
   ```sh
