@@ -5,7 +5,7 @@ use with Backblaze B2.
 This repo is a companion to a series of articles on [neap.space](https://neap.space):
 * [Deep Dive: Cloud Backup for Slow Connections, Part I](https://neap.space/2021/04/deep-dive-cloud-backup-for-slow-connections-part-i/)
 * [Deep Dive: Cloud Backup for Slow Connections, Part II](https://neap.space/2021/04/deep-dive-cloud-backup-for-slow-connections-part-ii/)
-* Part III coming soon
+* [Deep Dive: Cloud Backup for Slow Connections, Part III](https://neap.space/2021/11/deep-dive-cloud-backup-for-slow-connections-part-iii/)
 
 The results of each test are collected in the `data/` directory. For a more
 legible version, refer to the `graphsheet/` directory and to the accompanying
@@ -163,13 +163,11 @@ by running `pandoc -o graphsheet.pdf graphsheet.md`.
 
 ## Someday Maybe
 Here are some changes I'd like to make if I were to run the tests again:
-* Improve backup scripts to better model safe, real-world use by pointing to
-files for all credentials and including file permission steps in client-specific
-setup.
+* Use tuning options where available to try to account for some of the differences in the results.
+* Improve backup scripts to better model safe, real-world use. Point to files for credentials and include file permission steps in client-specific setup.
 * Use git-secrets for credentials to make it safe for you to fork this
 repository and post your own results without needing to manually set, then
 strip out keys and passwords.
-* Add more backup clients, and use measurement tools that are easier to parse
-than FreeBSD libxo XML output.
+* Add more backup clients (such as kopia), and use measurement tools that are easier to parse than FreeBSD libxo XML output.
 * Improve plot script to suck in all the test cases at once without needing
 tweaks for each one.
